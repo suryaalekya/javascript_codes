@@ -1,0 +1,63 @@
+<!DOCTYPE html> 
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width,initial-scale=1.0">
+            <title>Async And Await</title>
+            
+            
+            </head>
+        <body>
+            <script>
+                /*async function test(){
+                    x = 5+7
+                    return x
+                }
+
+                let res = test()
+                res.then(function(data){
+                    console.log(data)
+                })
+                console.log(res) 
+                */
+                
+                /*async function test(){
+                    x = await 5+7
+                    console.log("inside function")
+                    return x
+                }
+
+                let res = test()
+                console.log("Outside function")
+                res.then(function(data){
+                    console.log(data)
+                })
+                //console.log(res) 
+                */ 
+
+                /*async function test(){
+                    let res = fetch("test.txt")
+                    res.then(function(response){
+                        response.text().then(function(data){
+                            console.log(data)
+                        })
+                    })
+                }
+                test()
+                */ 
+
+                async function test(){
+                    console.log("inside function")
+                    let res =await fetch ("test.txt")
+                    console.log("inside function statement 2")
+                    let finalres =await res.text()
+
+                    console.log(finalres)
+                }
+                test()
+                console.log("outside function")
+            </script>
+        </body>
+    </html>

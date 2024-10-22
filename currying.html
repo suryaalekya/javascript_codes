@@ -1,0 +1,62 @@
+<!DOCTYPE html> 
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width,initial-scale=1.0">
+            <title>Currying</title>
+            
+    </head>
+
+    <body>
+       <!-- <script>
+
+        //normal function --- non curried
+        function sum(a,b,c){
+            return a+b+c
+        }
+        
+
+        //currying function
+        function one(a){
+            return function(b){
+                return function(c){
+                    return a+b+c
+                }
+            }
+        }
+        //console.log(one(1)(2)(3))
+        console.log(sum(1,2,3))
+
+        console.log(one())
+        console.log(one(1))
+        console.log(one(1)(2))
+        console.log(one(1)(2)(3))
+       </script> -->
+        
+        <script>
+            function multiply(a,b){
+                return a*b 
+            }
+
+            function multiplyCurry(a){
+                return function(b){
+                    return a*b 
+                }
+            }
+
+            let a = multiply(5,6)
+            
+            let multiplyWithFive = multiplyCurry(5)
+
+            console.log(multiplyWithFive(7))
+            console.log(multiplyWithFive(9))
+
+            let multiplyWithSix = multiplyCurry(6)
+
+            console.log(multiplyWithSix(4))
+            console.log(multiplyWithSix(3))
+        </script>
+    </body>
+    </html>

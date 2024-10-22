@@ -1,0 +1,87 @@
+<DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <metACa http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width,initial-scale=1.0">
+            <title>Call back function</title>
+            
+    </head>
+
+    <body>
+        <!-- <script>
+            /*function test(a){
+                a()
+                //console.log(a())
+            }
+            test(function(){
+                console.log("CAll back function")
+            })
+                */ 
+
+            /*function first(test){
+                test()
+                console.log("this is first function")
+                
+            }
+            function second(){
+                console.log("This is seceond function")
+            }
+
+            first(second)
+            */ 
+
+           /* function add(a,b){
+                console.log(a+b)
+            }
+
+            function prod(a,b){
+                console.log(a*b)
+            }
+
+            function cal(val1,val2,oper){
+                oper(val1,val2)
+            }
+
+            cal(4,5,add)
+            cal(2,3,prod)
+
+            */ 
+
+            /*arr=[1,2,3,4]
+            var res = arr.map(function(ele,index,arr){
+                return ele*ele
+            })
+            console.log(res)
+            */
+
+            function sum(a,b,callnext){
+                setTimeout(function(){
+                    let s = a+b 
+                    console.log(s)
+                    callnext(s)
+                },1000)
+            }
+
+            /*let res = sum(7,7,function(num){
+                console.log(num*num)
+            })
+                */
+            let res = sum(7,7,num=>{
+                console.log(num*num)
+            })
+        </script>-->
+
+        <h1>Call Stack</h1>
+        <script>
+        function sum(a,b){
+            let sum = a+b 
+            console.log(sums)
+            square(sum)
+
+        }
+    </script>
+    </body> 
+
+    </html>

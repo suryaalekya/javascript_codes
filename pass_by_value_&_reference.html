@@ -1,0 +1,52 @@
+<!DOCTYPE html> 
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width,initial-scale=1.0">
+            <title>pass by value and pass by reference</title>
+            
+    </head>
+
+    <body>
+        <script>
+
+            //pass by value
+            let x = 20;
+            function test(num){
+                num+=1 
+                console.log("Inside the function",num)
+            }
+
+            console.log("Before calling",x)
+            test(x)
+            console.log("After calling",x)
+
+
+
+            let y = [8];
+            function test(num){
+              num[0] =6
+                console.log("Inside the function",num[0])
+            }
+
+            console.log(y)
+            console.log("Before calling",y[0])
+            test(y)
+            console.log("After calling",y[0])
+
+
+            let z = {"state":"ap"};
+            function test(address){
+                address.state="TS"
+                console.log("Inside the function",address)
+            }
+
+            console.log(z)
+            console.log("Before calling",z)
+            test(z)
+            console.log("After calling",z)
+        </script>
+    </body>
+    </html>

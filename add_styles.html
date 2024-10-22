@@ -1,0 +1,51 @@
+<DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <metACa http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width,initial-scale=1.0">
+            <title>Add styles in javascript</title>
+    </head>
+    <style>
+        #special{
+            color: blue;
+        }
+        .one{
+            background-color: rgb(35, 158, 158);
+        }
+        .two{
+            border: 5px solid green;
+        }
+         .three{
+            padding: 30px;
+         }
+    </style>
+    <body>
+
+        <div id="special" class="one">
+            This is division one
+        </div>
+        <script>
+            /*var x = document.getElementById("special")
+            x.style.color="red"
+            x.style.border="black 3px solid"
+            x.style.backgroundColor="pink"
+            console.log(x.style)
+            */
+
+            /*
+            var x = document.getElementById("special")
+            console.log(x.getAttribute('id'))
+            x.setAttribute('class','one')
+            console.log(x.getAttribute('class'))
+            */ 
+
+            var x =document.getElementById("special")
+            x.classList.add('two')
+            console.log(x.classList)
+            x.classList.add('three')
+            x.classList.remove('one')
+        </script>
+    </body>
+    </html>

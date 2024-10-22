@@ -1,0 +1,34 @@
+<!DOCTYPE html> 
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width,initial-scale=1.0">
+            <title>How to Debug JAvascript in Dev Tools</title>
+            
+    </head>
+
+    <body>
+        <h1>How to Debug Javascript in Dev Tools</h1>
+        <script>
+            console.log("Debug Javascript")
+            debugger
+            console.log("Debug Javascript")
+            function add(n1,n2){
+                let sum=console.log("Sum of",n1,n2,"is : ",n1+n2)
+            }
+
+            function sub(n1,n2){
+                let diff=console.log("differnce of",n1,n2,"is : ",n1-n2)
+            }
+            function product(n1,n2){
+                let product=console.log("product of",n1,n2,"is : ",n1*n2)
+            }
+
+            add(8,5)
+            sub(8,5)
+            product(8,5)
+        </script>
+    </body>
+    </html>

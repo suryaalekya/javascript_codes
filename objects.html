@@ -1,0 +1,89 @@
+<DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <metACa http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width,initial-scale=1.0">
+            <title>Objects</title>
+    </head>
+
+    <body>
+        <script>
+            /*//Object literal
+            let movie = {name:"RRR",release:2022,director : "Rajamoulu"}
+            // to access the properties using keys 
+            console.log(movie["name"])
+            document.write(movie["name"])
+            document.write("<br>"+movie.director)
+
+            // to add new properties using keys in 2 ways to empty object or object
+            movie['budget']="400 crores"
+            movie.hero="Ram Charan"
+            console.log(movie)
+            document.write(movie)
+
+            // to add update properties using keys in 2 ways to empty object or object
+            movie['release']="2023"
+            console.log(movie)
+            */
+
+
+           /* // 2) using new operator object constructer
+            let movie1 = new Object()
+            console.log(movie1)
+            movie1['budget']="400 crores"
+            movie1.hero="Ram Charan"
+            console.log(movie1)
+            document.write(movie1)
+            */
+
+
+            /*//3) using new operator with constructer function
+            function user(name,age,place){
+                this.name = name;
+                this.age=age;
+                this.place=place;
+            }
+            let movie2=new user("Vakel sab",5,"hyderabad");
+            movie2.mobile=8309335055
+            let movie3=new user("mirchi",8,"kkd");
+            console.log(movie2,movie3)
+            */
+
+
+            /*//4)Object.create method
+            function user(name,age,place){
+                this.name = name;
+                this.age=age;
+                this.place=place;
+            }
+            let movie2=new user("Vakel sab",5,"hyderabad");
+            movie2.mobile=8309335055
+        
+            let user1=Object.create(movie2)
+            console.log("movie2: ")
+            console.log(movie2)
+            console.log("user1: ")
+            console.log(user1)
+            user1.num=0293810218
+            console.log(user1)
+            */
+
+            //Method for object
+            function user(name,age,place){
+                this.name = name;
+                this.age=age;
+                this.place=place;
+                this.login=function(){
+                    console.log("Hello "+this.name+"succesfully login")
+                }
+            }
+            let movie2=new user("Vakel sab",5,"hyderabad");
+            movie2.login()
+            console.log(Object.keys(movie2))
+            console.log(Object.values(movie2))
+            console.log(Object.entries(movie2))
+        </script>
+    </body>
+    </html>

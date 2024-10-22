@@ -1,0 +1,52 @@
+<!DOCTYPE html> 
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width,initial-scale=1.0">
+            <title>Ajax</title>
+            <style>
+                body{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                }
+                .button{
+                    background-color: rgb(90,104,235);
+                    border: 2px solid rgb(90,104,235);
+                    color: white;
+                    padding: 10px;
+                    display: block;
+                    width: 200px;
+                    font-size: 16px;
+                    border-radius: 2px;
+                    margin-bottom: 30px;
+                }
+            </style>
+    </head>
+
+    <body>
+        <input type="submit" class="button" id="special" value="Get Data">
+        <div id="data"></div>
+        <script>
+            let btn = document.getElementById("special")
+            let dataele = document.getElementById("data")
+            btn.addEventListener('click',loadData)
+
+            function loadData(){
+                let xhr = new XMLHttpRequest()//create objecet
+                xhr.open('GET','test.txt',true)//create request
+                xhr.send()//to send request
+
+                xhr.onprogress = function(){//onprogress means server ki request apudhu iyite veltadho apudhu response  vache varuku progress avutundhi ani chepedhaniki onprogress event use chestaru
+                    dataele.innerText="Loading...."
+                }
+                xhr.onload = function(){//onload anedhi request vellaka data response ga vachedhi onload event lo avutadhi.(display avutadhi)
+                    dataele.innerText=xhr.responseText;//responsetext anedhi server nunchi adhi iyte response ga data vastadho a data ni e responseText lo place chestadhi manaki 
+                }
+            }
+        </script>
+    </body>
+    </html>

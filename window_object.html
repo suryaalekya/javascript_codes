@@ -1,0 +1,78 @@
+<!DOCTYPE html> 
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width,initial-scale=1.0">
+            <title>Window Object</title>
+            <style>
+                body{
+                    margin-top: 50px;
+                    margin-left: 400px;
+                }
+            </style>
+    </head>
+
+    <body>
+        <h1>This is a main window</h1>
+        <button onclick="openNewWindow()">open a window</button>
+        <br><br>
+        <button onclick="closeNewWindow()">close a window</button>
+        <br><br>
+        <button onclick="MoveBYWindow()">Movie By window</button>
+        <br><br>
+        <button onclick="MoveToWindow()">Movie To window</button>
+        <br><br>
+        <button onclick="resizeBYWindow()">resize By window</button>
+        <br><br>
+        <button onclick="resizeToWindow()">resize To window</button>
+        <!-- <script>
+
+            var x =10 
+            person1={
+                name:"Xyz",
+                address:{
+                    line1 : "Sarapavam",
+                    pincode : 533003,
+                    street : "Panchayt Office"
+                }
+            }
+        </script> -->
+        <script>
+            //open method
+            var ref;
+            function openNewWindow(){
+                
+                ref=window.open("child_window.html","_blank","width=400px,height=200px,left=600px,top=200px")
+
+            } 
+
+            //close method
+            
+            function closeNewWindow(){
+                ref.close()
+            }
+
+            //move By method
+            function MoveByWindow(){
+                ref.moveBy(800,100)
+            }
+
+            //move To method
+            function MoveToWindow(){
+                ref.moveTo(200,100)
+            }
+
+            //resize to ----> echina parameters matrame tesukuntadhi mundhi echindhi tesukodhu
+            function resizeToWindow(){
+                ref.resizeTo(800,400)
+            }
+
+            //resize by ----> mundhu echina parameters and epudhu echinavi + avi estadhi width and height
+            function resizeBYWindow(){
+                ref.resizeBy(800,400)
+            }
+        </script>
+    </body>
+    </html>

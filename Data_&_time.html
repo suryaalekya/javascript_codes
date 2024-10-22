@@ -1,0 +1,71 @@
+<!DOCTYPE html> 
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <metACa http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width,initial-scale=1.0">
+            <title>Data and time</title>
+            
+    </head>
+
+    <body>
+        
+        <script>
+            /*function test(){
+                this.name = "xyz"
+            }
+            t1=new test()
+            */
+            
+            /*let d1 = new Date()
+            console.log(d1)
+            let d2 = new Date(20000)//india standard time means jan 01 1970 is the standard time in javascript
+            //1000ms = 1sec
+            // jan 01 1970 05:30:00 +10 = jan 01 1970 05:30:10
+            console.log(d2)
+
+            let d3 = new Date(24*60*60*1000)//one day add avutadhi standard time ki
+            console.log(d3)
+
+            let d4 = new Date('2022-2-08')//year-mon-date
+            console.log(d4)
+
+            let d5 = new Date('02-9-2020')//mon-date-year
+            console.log(d5)
+            
+            let d6 = new Date(2019,10,28,5,20,10)// it starts from 0 for months means 10 means november actual mon is october
+            console.log(d6)
+            */
+
+            /*let d1 = new Date()
+            let d2 = new Date(24*60*60*1000)
+            console.log(d2)
+            console.log(d2.getTime())//time millisecs lo estadhi 
+            */ 
+            let d1 = new Date()
+            console.log(d1)
+            console.log(d1.getFullYear())
+            console.log(d1.getMonth())
+
+           // let mons = ["jan","feb","mar","apr"]
+            //console.log(mons[d1.getMonth()])
+            console.log(d1.getDate())
+            
+            console.log(d1.getDay())// 0 means sunday , 1 - monday, 2 tuesday , 3 wednesday, 4 thursday, 5 friday , 6 saturday
+
+            //let d = ["sun","mon","tues","wed","thurs","fri","sat"]
+            //console.log(d[d1.getDay()])
+
+            /*d1.setFullYear(2023)
+            console.log(d1.getFullYear())
+            console.log(d1)
+
+            */ 
+            d1.setMonth(2)
+            console.log(d1.getMonth())
+            console.log(d1)
+
+        </script>
+    </body>
+    </html>

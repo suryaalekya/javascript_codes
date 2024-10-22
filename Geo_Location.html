@@ -1,0 +1,92 @@
+<!-- <DOCTYPE html>
+    <html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <metACa http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Goe Loaction</title>
+    </head>
+    <body>
+        <script>
+            if (navigator.geolocation){
+                navigator.geolocation.getCurrentPosition(getlatlong,error,{
+                    maximumAge:10,
+                    timeout:100,
+                    enableHighAccuracy:false,
+                })
+                
+            }
+            function getlatlong(data){
+                //console.log(data)
+                //console.log(data.coords)
+                console.log(data.coords.latitude)
+                console.log(data.coords.longitude)
+
+            }
+
+            function error(data){
+                console.log(data)
+                alert("Can't read user location")
+            }
+        </script> 
+
+    </body>
+    </html> -->
+
+
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geolocation Example</title>
+</head>
+<body>
+    <button onclick="startWatching()">Start Watching</button>
+    <button onclick="stopWatching()">Stop Watching</button>
+    <p id="location"></p>
+
+    <script>
+        let watchID;
+
+        function startWatching() {
+            if (navigator.geolocation) {
+                watchID = navigator.geolocation.watchPosition(showPosition, showError);
+            } else {
+                document.getElementById('location').innerText = "Geolocation is not supported by this browser.";
+            }
+        }
+
+        function stopWatching() {
+            if (watchID) {
+                navigator.geolocation.clearWatch(watchID);
+                watchID = null;
+            }
+        }
+
+        function showPosition(position) {
+            let lat = position.coords.latitude;
+            let lon = position.coords.longitude;
+            document.getElementById('location').innerText = `Latitude: ${lat}, Longitude: ${lon}`;
+        }
+
+        function showError(error) {
+            switch (error.code) {
+                case error.PERMISSION_DENIED:
+                    document.getElementById('location').innerText = "User denied the request for Geolocation.";
+                    break;
+                case error.POSITION_UNAVAILABLE:
+                    document.getElementById('location').innerText = "Location information is unavailable.";
+                    break;
+                case error.TIMEOUT:
+                    document.getElementById('location').innerText = "The request to get user location timed out.";
+                    break;
+                case error.UNKNOWN_ERROR:
+                    document.getElementById('location').innerText = "An unknown error occurred.";
+                    break;
+            }
+        }
+    </script>
+</body>
+</html>

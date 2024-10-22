@@ -1,0 +1,65 @@
+<DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <metACa http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width,initial-scale=1.0">
+            <title>Events in javasxript</title>
+    </head>
+    <style>
+        #b1{
+            width: 230px;
+            background-color: pink;
+            height: 50px;
+            border: transparent;
+        }
+        #special{
+            position: absolute;
+            top: 40%;
+            left: 40%;
+        }
+
+        #sp{
+            height: 20px;
+        }
+    </style>
+    <body>
+        <div id="special">
+            name: <input id="sp" type="text"/><br><br>
+            <!-- <button id ="b1" onclick="document.body.style.backgroundColor='yellow'"></button> -->
+            <!-- <button id="b1" onclick="change()">Change background</button -->
+            <!-- <button id="b1" onclick="alert('clicked')">Change background</button> -->
+            <button id="b1">Change background</button>
+        
+        </div>
+        <script>
+            /*function change(){
+                document.body.style.backgroundColor='yellow'
+            }
+                */
+
+            //let btn = document.getElementById("b1")
+            //btn.onclick=function(){document.body.style.backgroundColor='grey'}
+
+            /*btn.onclick=change
+            function change(){
+                document.body.style.backgroundColor='pink'
+            }*/
+
+            //btn.addEventListener('click',function(){document.body.style.backgroundColor='blue'})
+            /*btn.addEventListener('click',change)
+            function change(){
+                document.body.style.backgroundColor='red'
+            }*/ 
+
+
+            var fn = document.getElementById("sp")
+            fn.addEventListener('focus',change)
+            function change(event){
+                console.log(event)// to kown about event in console
+                fn.style.backgroundColor='red'
+            }
+        </script>
+    </body>
+    </html>

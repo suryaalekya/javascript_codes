@@ -1,0 +1,97 @@
+<!DOCTYPE html> 
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width,initial-scale=1.0">
+            <title>Ajax Example</title>
+            <style>
+                body{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                }
+                .button{
+                    background-color: rgb(90,104,235);
+                    border: 2px solid rgb(90,104,235);
+                    color: white;
+                    padding: 10px;
+                    display: block;
+                    width: 200px;
+                    font-size: 16px;
+                    border-radius: 2px;
+                    margin-bottom: 30px;
+                }
+            </style>
+    </head>
+
+    <body>
+        
+        <input type="submit" class="button" id="special" value="Get Data">
+        <div id="data"></div>
+        <script>
+            
+            let btn = document.getElementById("special")
+            let dataele = document.getElementById("data")
+
+            
+            btn.addEventListener('click',loadData)
+
+            /*function loadData(){
+                let xhr = new XMLHttpRequest()//create objecet
+                xhr.open('GET','country.json',true)//create request
+                xhr.send()//to send request
+
+                xhr.onload = function(){
+                    if (xhr.status == 200) {
+                        let res = xhr.responseText
+                        res = JSON.parse(res)
+                        let str = `<table border='1'><tr>`
+                        for (key in res) {
+                            str = str + `<th>${key}</th>`
+                        }
+
+                        str = str + `</tr><tr>`
+
+                        for (key in res) {
+                            str = str + `<td>${res[key]}</td>`
+                        }
+
+                        str = str + `</tr></table>`
+                        dataele.innerHTML =str
+                    }
+                  else{
+                    dataele.innerHTML="file Not Found"
+                  }
+                }
+            }*/ 
+            function loadData(){
+                let xhr = new XMLHttpRequest()//create objecet
+                //xhr.open('GET','https://restcountries.com/v3.1/all',true)//create request
+                xhr.open('GET','https://restcountries.com/v3.1/all',true)//create request
+                xhr.send()//to send request
+
+                xhr.onload = function(){
+                    if (xhr.status == 200) {
+                        let res=xhr.responseText
+                        res=JSON.parse(res)
+                        //console.log(res)
+                        let [country]=res 
+                        console.log(country)
+                        //dataele.innerHTML=""
+                        dataele.innerHTML=`<img src=${country.flags.png}>`
+                    }
+                  else{
+                    dataele.innerHTML="Invalid request"
+                  }
+                }
+                xhr.onprogress=function(){
+                    dataele.innerHTML="Getting...."
+                }
+            } 
+            
+        </script>
+    </body>
+    </html>

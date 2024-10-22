@@ -1,0 +1,69 @@
+<!DOCTYPE html> 
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <metACa http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width,initial-scale=1.0">
+            <title>call , apply, bind</title>
+            
+    </head>
+
+    <body>
+        <script>
+             /*var sal=2000;
+             function getsal(a,b){
+             //console.log(sal)
+             console.log(this.sal)
+             //console.log(window.sal)
+             console.log(a,b)
+             }
+             //getsal()
+             employee={
+                sal:30000 
+             }
+             employee2={
+                sal:50000 
+             }
+             employee3={
+                sal:90000 
+             }
+             
+             getsal.call(employee,67,690)
+             //getsal.call(employee2,56,890)
+             getsal.apply(employee2,[89,456])// apply method ki parameters ni array lo evali[]
+             var f=getsal.bind(employee3,56,890)
+             f()
+
+             */ 
+
+             var myObj = {
+                sal : 40000,
+                getSal : function(a,b){
+                    console.log(this.sal)
+                    console.log(a,b)
+                },
+                greet:function(wish){
+                    console.log(this.name,wish)
+                }
+             }
+             myObj.getSal(65,78)
+             employee={
+                sal:30000 
+             }
+             employee2={
+                sal:50000 
+             }
+             employee3={
+                name:"XTZ",
+                sal:90000 
+             }
+             
+             myObj.getSal.call(employee,67,690)
+             //myObj.getsal.call(employee2,56,890)
+             myObj.getSal.apply(employee2,[89,456])// apply method ki parameters ni array lo evali[]
+             var f=myObj.greet.bind(employee3)
+             f("Good afternoon")
+        </script>
+    </body>
+    </html>

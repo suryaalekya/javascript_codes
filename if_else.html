@@ -1,0 +1,81 @@
+<DOCTYPE html>
+    <html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <metACa http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>if_else</title>
+    </head>
+    <body>
+        
+    <script type="text/javascript">
+        /*var a=prompt("Enter a number")
+        document.write(a)
+        document.write("<br>")
+        var b=prompt("Enter a number")
+        document.write(b)
+        document.write("<br>")
+        if(a==b){
+            document.write("Positive")
+        }
+        else{
+            document.write("Negative")
+        }*/
+
+        /*var balance = 10000
+        var amount = prompt("enter a amount to transfer")
+
+        if (amount<balance){
+            alert("before deduction balance:"+ balance)
+            balance=balance-amount
+            alert("deducted successfully")
+            alert("after deduction balance:"+balance)
+        }
+        else{
+            alert("your balance is :" + balance + "enter amount less than your balance")
+        }*/
+        /*var score = prompt("enter marks")
+        var grade;
+        
+        if(score>=90){
+            grade='A'
+        }
+        else if(score>=80){
+            grade='B'
+        }
+        else if(score>=70){
+            grade='C'
+        }
+        else if(score>=60){
+            grade='D'
+        }
+        else if(score>=50){
+            grade='E'
+        }
+        else{
+            grade='F'
+        }
+        document.write("Your marks: "+score+" And Grade is "+grade)*/
+
+        var num1 =+prompt("Enter number 1")
+        var num2 =+prompt("Enter number 2")
+        var operations=prompt("Enter which operation to do (+/-/*/ /)")
+
+        switch(operations){
+            case "+": 
+                 alert(`Sum of two numbers is: ${num1+num2}`)
+                 break;
+            case "-":
+            alert(`Subtract of two numbers is ${num1-num2}`)
+            break;
+            case "*":
+            alert(`multiplication of two numbers is ${num1*num2}`)
+            break;
+            case "/":
+            alert(`division of two numbers is ${num1/num2}`)
+            break;
+            default:alert("wrong operations")
+        }
+    </script>
+    </body>
+    </html>

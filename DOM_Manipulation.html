@@ -1,0 +1,63 @@
+<DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <metACa http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width,initial-scale=1.0">
+            <title>DOM Manipulation</title>
+    </head>
+
+    <body>
+        <div id="first"> 
+            <p>this is first para in div 1</p>
+            <p>this is second para in div 1</p>
+        </div>
+        <div id="second"> 
+            <p>this is first para in div 2</p>
+            <p id="last">this is second para in div 2</p>
+        </div>
+        <script>
+            /*
+             var n = document.createElement('p')
+             n.innerText="This is special para in div 3"
+             //n.innerText="This is third para in div 3"
+             var parent=document.getElementById("second")
+             var lst = document.getElementById("last")
+             parent.insertBefore(n,lst)
+             //parent.appendChild(n)
+             //console.log(parent.innerText)
+             //console.log(parent.innerHTML)
+             */ 
+
+             /*//to remove element
+             var lst = document.getElementById("last")
+             last.remove()
+             //document.getElementById("last").remove()
+             */ 
+
+
+             /*//remove specific child in parent 
+             var n = document.createElement('p')
+             n.innerText="This is special para in div 3"
+             
+             var parent=document.getElementById("second ")
+             var lst = document.getElementById("last")
+            
+             parent.removeChild(last)
+             */ 
+
+             //to replace an element 
+             var n = document.createElement('h1')
+             n.innerText="This is special heading in div 2"
+             
+             
+             var lst = document.getElementById("last")
+             lst.replaceChildren(n)
+             
+              
+
+        </script>
+    </body>
+
+    </html>

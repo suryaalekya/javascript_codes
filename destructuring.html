@@ -1,0 +1,47 @@
+<!DOCTYPE html> 
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width,initial-scale=1.0">
+            <title>Destructuring</title>
+            
+    </head>
+
+    <body>
+        <script>
+
+            /*let arr = [100,200,300,400]
+
+            
+            let [a,b,c]=arr 
+            console.log(a,b,c)
+            let [e,,f]=arr 
+            console.log(e,f)
+            let [x,...y]=arr 
+            console.log(x,y)
+            */ 
+
+            let person= {
+                name:"alex",
+                age : 26,
+                address : {
+                    city:"Banglore",
+                    state:"Hyderabad"
+                }
+            }
+
+            //console.log(person.address.city)
+            //let {name,age} = person 
+            //let {name,age,address:{city}} = person 
+            //console.log(name,age,city)
+            console.log("Hello")
+
+           //let {n='test',age}=person 
+            //console.log(n,age)
+            let {name:n , age:a }=person 
+            console.log(n,a)
+        </script>
+    </body>
+    </html>

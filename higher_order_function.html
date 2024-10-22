@@ -1,0 +1,99 @@
+<DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <metACa http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width,initial-scale=1.0">
+            <title>Higher order function</title>
+            
+    </head>
+
+    <body>
+        <script>
+
+            //receiving another function as argument
+
+            /*function first(fun){
+                console.log(fun())
+                fun()
+            }
+
+            function second(){
+                console.log("This is second function")
+            }
+            //var second=19 
+            first(second)
+            */ 
+
+            /*
+            var arr = [56,7,8,10,11]
+            function square(arr){
+                squares = []
+                for(ele of arr){
+                    let res = ele*ele;
+                    squares.push(res)
+                }
+                //console.log(squares)
+                return squares
+            }
+            function cube(arr){
+                cubes = []
+                for(ele of arr){
+                    let res = ele*ele*ele;
+                    cubes.push(res)
+                }
+                //console.log(squares)
+                return cubes
+            }
+            let x =square(arr)
+            console.log(x)
+
+            let y = cube(arr)
+            console.log(y)
+            */ 
+            /*var arr = [56,7,8,10,11]
+            function square(num){
+                return num*num
+            }
+
+            function cube(num){
+                return num*num*num
+            }
+
+            function increment(num){
+                return num+1
+            }
+            function anyoperation(arr,operation){
+                let res = []
+                for(ele of arr)
+                    res.push(operation(ele))
+                    return res
+                
+            }
+            console.log(arr)
+            let x = anyoperation(arr,square)
+            console.log(x)
+            let y = anyoperation(arr,cube)
+            console.log(y)
+
+            let z = anyoperation(arr,increment)
+            console.log(z)
+            */ 
+
+
+            //returning a function
+
+            function first(){
+                //return second;
+                //return ()=>{console.log("This is arrow function")}
+                return function(){console.log("this is anonymous")}
+            }
+            function second(){
+                console.log("This is second function")
+            }
+
+            first()()
+        </script>
+    </body>
+    </html>

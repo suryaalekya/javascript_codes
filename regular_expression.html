@@ -1,0 +1,101 @@
+<!DOCTYPE html> 
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width,initial-scale=1.0">
+            <title>Regular Expressions</title>
+            
+    </head>
+
+    <body>
+        <script>
+           /*
+            //let re = /hello/g
+            //let res  = re.test("Hello javascript")
+            //console.log(res)
+
+            let re = /^[0-9]{10}&/
+           // new RegExp("hello")
+           let res  = re.test("9382081")
+            console.log(res)
+            */ 
+            
+            /*let re = new RegExp("hello")
+            let res = re.test("thello")
+            console.log(res)
+            */ 
+
+            /*let re = /hello/g
+            let res = re.exec("hello javahelloscript hello")
+            console.log(res)
+
+            console.log(res.index)
+             res = re.exec("hello javahelloscript hello")
+            console.log(res)
+            console.log(res.index)
+
+            res = re.exec("hello javahelloscript hello")
+            console.log(res)
+            console.log(res.index)
+            */ 
+            
+            //let reg = /[a89]/   //e 3 lo adhe okati mana requirement lo vunte apudhu true return avutadhi
+
+            //let reg = /[^a89]/    //e 3 kakunda verevi vuntey true return avutadhi
+
+            /*let reg = /[0-9]/
+            console.log(reg.test("k"))
+            */ 
+            //let reg =/he.llo/  // a dot place lo adhena single char ravali ani ardam 
+
+            //let reg = /\d/         //[0-9] numbers lo odho oka num vundali ani 
+
+            /*let reg = /\D/          //[0-9] numbers kakunda string vuntey, if num vunna veredhi a string anna sare  true return avutadhi 
+            console.log(reg.test("9"))
+            //console.log(reg.test("9avan"))
+            console.log("Hello \n js")   // e \n anedhi nxt line ki tesukuni veltadhi
+            */  
+
+            //let reg = /\w/         // means [0-9] [a-z] [A-Z] and [_]  endhilo am vunna true return avutadhi
+             
+            let reg = /\W/           // edhi [\w] ki reverse antey [0-9] [a-z][A-Z][_] evi am kakunda verevi am vunna true return avutadhi
+            console.log(reg.test("*_")) //return false 
+            console.log("Hello \n js")
+            
+
+
+
+            /*
+            ----------------------------------------------------------------------------------------------------------
+            Brackets:
+            Expression        Description                                  Example
+            ----------------------------------------------------------------------------------------------------------
+            [....]            Any one character between the brackets.     [a89] => a or 8 or 9
+            [^...]            Any one character not between the brackets  [a89] => everything except a, 8 and 9
+            [0-9]             Any number from 0-9                          0/1/2..../9
+            [a-z]             Any lower case alphabet                      a/b/c/............../2
+            [A-Z]             Any Upper case alphabet                       A/B/............/Z
+            [a-Z]             Any lower case or uppercase.                  a/b/c/....z, A/B/.....Z
+         
+           -----------------------------------------------------------------------------------------------------------
+           ------------------------------------------------------------------------------------------------------------
+
+           Quantifiers:For specifying the number of occurrences of a character
+
+           Quantifier          Description                          Example
+           --------------------------------------------------------------------------------------------------------------
+             *                 Match zero or more times.            Bm* =>"B" "Bm", "Bmm", "Bmmm", and so on...
+             +                 Match one or more times.             j +=>"j","jj","jjj"....
+             ?                 Match zero or one time.              bS?=>"b" or "bs", but not "bss"...
+            {n}                Match exactly n times.               Jab{5}. => "Jabbbbb"
+            {n,}               Match at least n times.              mb{3,} =>"mbbb","mbbbb".....
+            {n,m}              Match from n to m times.             br{3,5}a => "brrrr" or "brrrrr" or "brrrrrrr"
+
+            -----------------------------------------------------------------------------------------------------------
+            -----------------------------------------------------------------------------------------------------------
+       */
+        </script>
+    </body>
+    </html>

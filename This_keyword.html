@@ -1,0 +1,68 @@
+<!DOCTYPE html> 
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <metACa http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width,initial-scale=1.0">
+            <title>This Keyword</title>
+            
+    </head>
+
+    <body>
+        <!-- <input type="button" value="click" onclick="console.log(this)">
+        <input type="button" value="click" onclick="this.style.background='green';this.style.color='white' "> -->
+        <!-- <input type="button" value="click" id="btn"> -->
+        <script>
+            //value ofthis keyword outsoide a function/object
+            /*var a = 10;
+            console.log(this)
+        function add(){
+
+        }
+        console.log(window.a)
+        console.log(a)//it treats like window.a only
+
+        console.log(this.a)//all relates to window object only functions,string,sets,objects.array
+
+        var ab={
+            name:"ANU"
+        }
+        console.log(this.ab)*/
+
+        //value of this keyword inside a regular function
+        /*var a = 10;
+            
+        function add(){
+            console.log(this.a)
+            console.log(window.a)
+        }
+        add()
+        */
+
+        //value of this keyword inside a method
+
+        /*var a =10 
+        var movie = {
+            name:"RRR",
+            getName:function(){
+                console.log(this)
+            }
+        }
+        movie.getName()*/ 
+
+        //value of this keyword event handler
+        /*document.getElementById("btn").onclick=function(){
+            console.log(this)
+        }
+            */
+            
+        //value of this keyword inside a function in strict mode
+        "Use strict"
+        function test(){
+            console.log(this)
+        }
+        test()
+        </script>
+    </body>
+    </html>

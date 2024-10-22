@@ -1,0 +1,42 @@
+<DOCTYPE html>
+    <html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <metACa http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Flatten Arrays</title>
+    </head>
+    <body>
+        <!-- <h1>Using function</h1>
+        <script>
+
+            let nums = [1,2,[4,8,[10,12,324]],[9,3],[10,14],29]
+
+            let res = []
+
+            function arrayFlat(arr){
+                for(ele of arr){
+                    if(Array.isArray(ele)){
+                        arrayFlat(ele)
+                    }
+                    else{
+                        res.push(ele)
+                    }
+                }
+
+            }
+           arrayFlat(nums)
+           console.log(nums)
+           console.log(res)
+        </script> -->
+
+        <h1>USing flat inbuilt function</h1>
+        <script>
+            let arr = [1, [2, [3, [4, 5]]], 6];
+
+let flattened = arr.flat(Infinity);
+//let flattened = arr.flat(Infinity);
+console.log(flattened); // Output: [1, 2, 3, 4, 5, 6]
+        </script>
+    </body>
+    </html>

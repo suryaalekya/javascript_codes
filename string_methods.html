@@ -1,0 +1,45 @@
+<!DOCTYPE html> 
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <metACa http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width,initial-scale=1.0">
+            <title>String methods</title>
+            
+    </head>
+
+    <body>
+        
+        <script>
+            let x = "java script va"
+            let y = "makes webpage dynamic"
+            //var y = new String("HTML")
+            //console.log(x)
+            //console.log(y)
+            //console.log(y.startsWith())
+            console.log(x.charAt(7))//it gives position of the num from given string
+            console.log(x.indexOf('a'))//gives index num
+            console.log(x.indexOf('script'))
+            console.log(x.lastIndexOf('a'))
+            console.log(x.toLowerCase())
+            console.log(x.toUpperCase())
+            console.log(x.concat(y))
+            console.log(x.trim())//it removes spcaes at starting and ending places of string
+            console.log(x.split())//it split it string and form array 
+            console.log(x.split('a'))
+            console.log(x.startsWith('j'))//it returns true if it starts with particular char, else false 
+            console.log(x.endsWith('a'))//it returns true if it ends with particular char, else false 
+            console.log(x.slice(0,9))//it gives string from particular index to end of the particular index.exanple 0,9  then it will give 0 - 8
+            console.log(x.slice(-3,-1))//first small evali nxt big evali
+            console.log(x.substring(2,5))//it takes only positive indexs
+            console.log(x.substr(2,6))//it takes start index and how many chars we want
+            console.log(x.includes('a'))//particular string or char vunda ledha ani if vuntey true return chestadhi else false return chestadhi
+            console.log(x.charCodeAt(3))//it gives ascii code of the particular char from string example i give 3 that means in string 3 means a so a's ascii code is 97
+            console.log(x.repeat(2))//it repeat the string for given particular times 
+            console.log(x.replace('java','html'))//it replace the one part with another part
+            console.log(x.replace('va','python'))//it replaces at first one only
+            console.log(x.replace(/va/g,'python'))// it replaces all places because we give globally to change
+        </script>
+    </body>
+    </html>

@@ -1,0 +1,47 @@
+<DOCTYPE html>
+    <html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <metACa http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Default and rest paramenters</title>
+    </head>
+    <body>
+        <script>
+            //Default parameters
+            /*//function pro(num1,num2){
+            function pro(num1,num2=2){
+                console.log("num1: " + num1 + "; num2: "+num2+"; num1*num2 =  "+ (num1*num2))
+                document.write("num1: " + num1 + "; num2: "+num2+"; num1*num2 =  "+ (num1*num2))
+            }
+            pro(3,4)
+            document.write("<br>")
+            pro(8,7,8)
+
+            document.write("<br>")
+            pro(2)
+            */
+
+
+
+            //Rest parameters
+
+            function product(num1,num2,...num){
+                //console.log(arguments)
+                //console.log(arguments[0])
+                //console.log(arguments.length)
+                console.log(num)
+                 var res = num1*num2;
+                 for(rest of num){
+                    res = res*rest 
+                 }
+                 console.log(res)
+                 document.write("num1: " + num1 + "; num2: "+num2+"; num1*num2 =  "+ (res)+"<br>")
+            }
+                 
+            product(8,7,8)
+            product(2,3,4,5)
+            product()
+        </script>
+    </body>
+    </html>

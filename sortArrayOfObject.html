@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <metACa http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Sort array of Objects</title>
+</head>
+
+<body>
+    <h1>Sort array of objects</h1>
+    <script>
+        console.log("Sort")
+        const people = [
+            { name: 'Alice', age: 25 },
+            { name: 'Bob', age: 30 },
+            { name: 'Charlie', age: 20 }
+        ];
+
+        people.sort((a, b) => b.age - a.age);
+
+        console.log(people);
+
+        const peoples = [
+            { name: 'Alice', age: 25 },
+            { name: 'Bob', age: 30 },
+            { name: 'Charlie', age: 20 }
+        ];
+
+        peoples.sort((a, b) => a.name.localeCompare(b.name));
+
+        console.log(people);
+        // Output: 
+        // [
+        //   { name: 'Alice', age: 25 },
+        //   { name: 'Bob', age: 30 },
+        //   { name: 'Charlie', age: 20 }
+        // ]
+
+
+    </script>
+    <h1>Filter array of objects</h1>
+    <script>
+        console.log("filter")
+        const peop = [
+            { name: 'Alice', age: 25 },
+            { name: 'Bob', age: 30 },
+            { name: 'Charlie', age: 20 }
+        ];
+
+        const adults = peop.filter(person => person.age >= 25);
+
+        console.log(adults);
+        const aNames = peop.filter(person => person.name.startsWith('A'));
+
+console.log(aNames);
+
+    </script>
+
+</body>
+
+</html>

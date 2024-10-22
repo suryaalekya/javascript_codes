@@ -1,0 +1,41 @@
+<!DOCTYPE html> 
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width,initial-scale=1.0">
+            <title>Error handling</title>
+            
+            
+            </head>
+        <body>
+
+            <!-- <script> 
+                try{
+                    console.log("line1")
+                console.log(line2)
+                console.log("inside try")
+                
+                }
+                catch(error){
+                    console.log(error.name)//gives a var ledhu ani estadi like reference error
+                    console.log(error.message)//manaki only error ani este name and messga rendu estadhi
+                    console.log(error)
+                    console.log("inside catch")
+                }
+                console.log("out side try block") 
+            </script>-->  
+
+            <script>
+                let x= 18
+                console.log("Line1")
+                if(x<15){
+                    throw "X must be greater than 15"
+                    console.log("please provide number />15")
+                }
+
+                console.log("Hello")
+            </script>
+        </body>
+    </html>

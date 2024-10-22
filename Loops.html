@@ -1,0 +1,51 @@
+<DOCTYPE html>
+    <html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <metACa http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Loops</title>
+    </head>
+    <body>
+        
+    <script type="text/javascript">
+        //For loop
+        /*var sum=0;
+        var n=+prompt("Enter a number")
+        for(let counter=1; counter<=n;counter++){
+            sum=sum+counter
+        }
+        document.write(sum)*/
+
+        //While loop
+        /*var num = +prompt("enter a number")
+        while(num!=0){
+            document.write("entered number: " + num)
+            document.write("<br>")
+            num = +prompt("Enter a number")
+        }*/
+        //do- while loop
+        /*var count = 5
+        do{
+            
+            num=+prompt("enter a number")
+            document.write("Entered a number: "+ num + "<br>")
+            document.write("<br>")
+            count=count-1
+        }
+        while(count>0);*/
+
+        //for in loop
+        var fruits=['mango','apple','banana', 'kiwi']
+        for (x in fruits){
+            document.write(x + " " + fruits[x] +"<br>")
+        }
+
+        // for of loop
+        var fruits=['mango','apple','banana', 'kiwi']
+        for (x of fruits){
+            document.write(x + " " + fruits[x] +"<br>")
+        }
+    </script>
+    </body>
+    </html>

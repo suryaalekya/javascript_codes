@@ -1,0 +1,41 @@
+<!DOCTYPE html> 
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <metACa http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width,initial-scale=1.0">
+            <title>Optional chaining</title>
+            
+    </head>
+
+    <body>
+        <p id="one">This is paragraph</p>
+        <script>
+            let employee={
+                id:151,
+                email : "xyz@gmail.com",
+                personalInfo:{
+                    name:"anu",
+                    mobile: 8593832911,
+                    address:{
+                        line1:"Near big bazar",
+                        line2 :"ameerpet road",
+                        
+                        city: "Hyderabad",
+                        state : "Telagana"
+                    }
+                }
+            }
+
+            //console.log(employee.personalInfo?.address?.pincode?.one)
+            //console.log("Hello",employee.personalInfo.name)
+
+            //null/undefined --- ?
+            let p = document.getElementById("two")?.innerText 
+            console.log(p)
+            console.log("Hello")
+            
+        </script>
+    </body>
+    </html>

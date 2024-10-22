@@ -1,0 +1,51 @@
+<DOCTYPE html>
+    <html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <metACa http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Console Methos</title>
+    </head>
+    <body>
+        
+    <script>
+        let s = "user"
+        console.log("log method",s)// to display  , development kosam use chestaru
+        console.info("log method",s) // to display to user while developing 
+        console.warn("log method")// to give warning, the background of this method comes in orange shiade
+        console.error("log method")// to give error while doing wrong in the task the background of this method comes in red shiade
+        console.table(['xys','abc','pqr'])
+        console.table({name:"xyz",age:24,place:"kkd"})//array or objects ni table form lo display cheyali antey
+        console.clear()//it clears all the data in console.
+        console.assert(10>15,"condition false")// conditon pass chesi apudhu iyite false avutadho apudhu console lo display cheyali ante edhi use cjestaru
+        console.count("called")
+        console.count("called")// a method ni anni sarul call chesamo display chestadhi, it is used for count the paricular task to know how many times it calls
+        console.countReset("called")// it remove all counts
+        console.count("called")//now new ga add avutayi count
+
+        /*let x = +prompt("Enter a num")
+        console.time("Loop time:")
+        while(x!=10){
+            console.log("enter 10")
+            x=+prompt("enter a num")
+            console.count("Called:")
+        }
+        console.timeEnd("Loop end time:")// oka particular task ki anta time tesukundhi
+        */
+
+        //group ----> oka indention tho display avutayi
+
+        console.group("group1")
+        console.log("group1 log1")
+        console.log("group1 log2")
+        console.log("group1 log3")
+        console.groupEnd()
+
+        console.group("group2")
+        console.log("group2 log1")
+        console.log("group2 log2")
+        console.log("group2 log3")
+        console.groupEnd()
+    </script>
+    </body>
+    </html>

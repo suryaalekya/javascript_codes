@@ -1,0 +1,95 @@
+<!DOCTYPE html> 
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width,initial-scale=1.0">
+            <title>Classes</title>
+            
+    </head>
+
+    <body>
+        <!--<h1>Normal classes and also function to update ram</h1>
+         <script>
+            class mobiles{
+                constructor(n,p,r){
+                    this.name = n 
+                    this.price=p 
+                    this.ram = r 
+                }
+                updateRam(uram){
+                    this.ram=uram
+                }
+            }
+            let m1 = new mobiles("realme 8",23000,"6gb")
+            let m2 = new mobiles("vivo",30000,"12gb")
+            console.log("m1",m1)
+            console.log("m2",m2)
+            m2.updateRam("4gb")
+            console.log("m2 after update",m2)
+
+        </script> -->
+
+        <!-- <h1>Getters and setters</h1>
+        <script>
+            class mobiles{
+                constructor(n,r){
+                    this.name = n 
+                    this.ram = r 
+                }
+                
+                set priceSet(p){
+                    if(p<=0){
+                        alert("price can not be less than 0")
+                    }
+                    else{
+                        this.price = p;
+                    }
+                }
+                get getName(){
+                    return "Your mobile name:"+this.name
+                }
+            }
+            let m1 = new mobiles("realme 8","6gb")
+            let m2 = new mobiles("vivo","12gb")
+            console.log("m1",m1)
+            console.log("m2",m2)
+        </script> -->
+
+
+
+
+        <h1>Inheritance in classes</h1>
+        <script>
+            class Person{
+                constructor(name,phone){
+                    this.name=name;
+                    this.mobile_no=phone;
+                }
+                getPersonDetails(){
+                    console.log("name:",this.name,"\n mobile:",this.mobile_no)
+                }
+            }
+
+            let p1 = new Person("Anu",8309335055)
+            console.log(p1)
+
+            class Employee extends Person{
+                constructor(n,m,s,c){
+                    super(n,m)
+                    this.salary = s;
+                    this.company = c
+                }
+                getOfficeDetails(){
+                    console.log("salary:",this.salary,"\n Company:",this.company)
+                }
+            }
+
+            let e1 = new Employee("abc",9052655505,30000,"TCS")
+            console.log(e1.getOfficeDetails())
+            console.log(e1.getPersonDetails())
+
+        </script>
+    </body>
+    </html>
